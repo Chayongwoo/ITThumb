@@ -241,103 +241,132 @@ h1,h2,h3,h4,h5,h6 {
 	<div>
 	<table style="width:100%; align:center; height:500px;">
 	<tr class="trName">
+		<c:if test="${!empty companyinfo.insurance}">
 		<td style="width:10%;background-color:#e6e6ff; font-weight:bold; font-size : 10pt;">
 			연금보험
 		</td>
 		<td style="width:35%; border-bottom:1px solid #CFCFCF;" class="tdCon">
 			${companyinfo.insurance}
 		</td>
+		</c:if>
+		<c:if test="${!empty companyinfo.salsystem}">
 		<td style="width:10%; background-color:#e6e6ff; font-weight:bold; font-size : 10pt;">
 			급여제도
 		</td>
 		<td style="width:35%; border-bottom:1px solid #CFCFCF;" class="tdCon">
 			${companyinfo.salsystem}
 		</td>
+		</c:if>
 	</tr>
 	<tr class="trName">
+		<c:if test="${!empty companyinfo.society }">
 		<td style="background-color:#e6e6ff; font-weight:bold; font-size : 10pt;">
 			동호회/조직
 		</td>
 		<td class="tdCon" style=" border-bottom:1px solid #CFCFCF;">
 			${companyinfo.society}
 		</td>
+		</c:if>
+		<c:if test="${!empty companyinfo.mood}">
 		<td style="background-color:#e6e6ff; font-weight:bold; font-size : 10pt;">
 			회사분위기
 		</td>
 		<td class="tdCon" style=" border-bottom:1px solid #CFCFCF;">
 			${companyinfo.mood}
 		</td>
+		</c:if>
 	</tr>
 	<tr class="trName">
+		<c:if test="${!empty companyinfo.anniversary}">
 		<td style="background-color:#e6e6ff; font-weight:bold; font-size : 10pt;">
 			명절/기념일
 		</td>
 		<td class="tdCon" style=" border-bottom:1px solid #CFCFCF;">
 			${companyinfo.anniversary }
 		</td>
+		</c:if>
+		<c:if test="${!empty companyinfo.health}">
 		<td style="background-color:#e6e6ff; font-weight:bold; font-size : 10pt;">
 			의료/건강
 		</td>
 		<td class="tdCon" style=" border-bottom:1px solid #CFCFCF;">
 			${companyinfo.health}
 		</td>
+		</c:if>
 	</tr>
 	<tr class="trName">
+		<c:if test="${!empty companyinfo.care}">
 		<td style="background-color:#e6e6ff; font-weight:bold; font-size : 10pt;">
 			출산/육아
 		</td>
 		<td class="tdCon" style=" border-bottom:1px solid #CFCFCF;">
 			${companyinfo.care}
 		</td>
+		</c:if>
+		<c:if test="${!empty companyinfo.office}">
 		<td style="background-color:#e6e6ff; font-weight:bold; font-size : 10pt;">
 			사무실 환경
 		</td>
 		<td class="tdCon" style=" border-bottom:1px solid #CFCFCF;">
 			${companyinfo.office}
 		</td>
+		</c:if>
 	</tr>
 		<tr class="trName">
+		<c:if test="${!empty companyinfo.clothes}">
 		<td style="background-color:#e6e6ff; font-weight:bold; font-size : 10pt;">
 			의복관련
 		</td>
 		<td class="tdCon" style=" border-bottom:1px solid #CFCFCF;">
 			${companyinfo.clothes}
 		</td>
+		</c:if>
+			<c:if test="${!empty companyinfo.meal}">
 		<td style="background-color:#e6e6ff; font-weight:bold; font-size : 10pt;">
 			식사관련
 		</td>
 		<td class="tdCon" style=" border-bottom:1px solid #CFCFCF;">
 			${companyinfo.meal}
 		</td>
+		</c:if>
 	</tr>
 	<tr class="trName">
+		<c:if test="${!empty companyinfo.traffic}">
 		<td style="background-color:#e6e6ff; font-weight:bold; font-size : 10pt;">
 			교통 출퇴근
 		</td>
 		<td class="tdCon" style=" border-bottom:1px solid #CFCFCF;">
 			${companyinfo.traffic}
 		</td>
+			</c:if>
+		<c:if test="${!empty companyinfo.supplies}">	
 		<td style="background-color:#e6e6ff; font-weight:bold; font-size : 10pt;">
 			지급품
 		</td>
 		<td class="tdCon" style=" border-bottom:1px solid #CFCFCF;">
 			${companyinfo.supplies}
 		</td>
+		</c:if>
 	</tr>
 		<tr class="trName">
+		<c:if test="${!empty companyinfo.supportfund}">	
 		<td style="background-color:#e6e6ff; font-weight:bold; font-size : 10pt;">
 			지원금/대출
 		</td>
 		<td class="tdCon" style=" border-bottom:1px solid #CFCFCF;">
 			${companyinfo.supportfund}
 		</td>
+		</c:if>
+		<c:if test="${!empty companyinfo.companyevent}">	
 		<td style="background-color:#e6e6ff; font-weight:bold; font-size : 10pt;">
 			회사 행사
 		</td>
 		<td class="tdCon" style=" border-bottom:1px solid #CFCFCF;">
 			${companyinfo.companyevent}
 		</td>
+		</c:if>
 	</tr>
+	<c:if test="${!empty companyinfo.education}">
 	<tr class="trName">
 		<td style="background-color:#e6e6ff; font-weight:bold; font-size : 10pt;">
 			교육관련
@@ -346,6 +375,7 @@ h1,h2,h3,h4,h5,h6 {
 			${companyinfo.education}
 		</td>
 	</tr>
+	</c:if>
 </table>
 </div>
 <br>

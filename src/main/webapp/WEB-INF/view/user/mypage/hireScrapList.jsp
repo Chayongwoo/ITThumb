@@ -14,11 +14,11 @@
 		var checkarr = []
 		var str = "";
 		$('#selDelete').click(function(i) {
+			event.preventDefault();
 			checkarr = []
 			$('input:checkbox[name="scrapchk"]:checked').each(function() {
 				checkarr.push($(this).val());
 			})
-			event.preventDefault();
 
 			str = checkarr.join(',');
 
@@ -135,13 +135,17 @@
 						<td style="text-align:center">${ datelist[status.index]}일 전</td>
 						<td style="text-align:center"><input type="checkbox" class="scrchk"
 							name="scrapchk" value="${scraphire.hireno}"></td>
-						<td style="text-align:center"><a class="button" href="javascript:selectDelete(scrapchk)"
+						
+					</tr>
+					<tr>
+						<td style="text-align:right" colspan="8"><a class="button" href="javascript:selectDelete(scrapchk)"
 						id="selDelete">스크랩 해제</a></td>
 					</tr>
 				</c:forEach>
 			</c:if>
 			<c:if test="${scraphirecount ==0 }">
 				<tr>
+				
 					<td colspan="8" style="text-align: center">
 						<p>해당 목록이 비어있습니다.</p>
 					</td>
